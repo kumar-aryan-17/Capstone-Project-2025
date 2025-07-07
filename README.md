@@ -32,6 +32,7 @@ graph TD
     E & F & G --> H[Pricing Output Table]
     H --> I[Bokeh Visualization Dashboard]
     H --> J[JSON / Log Output]
+
 ```
 
 ---
