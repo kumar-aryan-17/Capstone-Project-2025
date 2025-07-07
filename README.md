@@ -82,9 +82,9 @@ graph TD;
 - Feature importance and parameter weights were informed by **EDA heatmaps**.
 
 ```math
-\text{demand} = \alpha \cdot \text{occupancy\_rate}_{\text{norm}} + 
-                \beta \cdot \text{QueueLength}_{\text{norm}} - 
-                \gamma \cdot \text{TrafficConditionNearby}_{\text{norm}} + 
+\text{demand} = \alpha \cdot \text{occupancy\_rate_\_norm} + 
+                \beta \cdot \text{QueueLength\_norm} - 
+                \gamma \cdot \text{TrafficConditionNearby\_norm} + 
                 \delta \cdot \text{IsSpecialDay} + 
                 \epsilon \cdot \text{vehicle\_weight}
 ```
