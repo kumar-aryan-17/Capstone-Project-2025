@@ -53,7 +53,7 @@ graph TD;
 
 ```
 ├── Capstone_Project_Implementation.ipynb.ipynb   # Complete Colab notebook with all models & visualizations
-├── Summer_Analytics_Report.pdf          # Final well-documented project report (optional but added)
+├── Summer Analytics 2025 – Final Project Report.pdf          # Final well-documented project report (optional but added)
 ├── dataset.csv                        # Input data for all models
 ```
 
