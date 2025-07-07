@@ -1,3 +1,4 @@
+
 # Capstone-Project-2025
 ### Capstone Project by Summer Analytics 2025 ( IIT Guwahati )
 
@@ -79,6 +80,13 @@ graph TD;
 - Constructs a **demand function** using occupancy rate, queue length, traffic conditions, special days, and vehicle weight.
 - Demand is normalized to [0, 1], and price is calculated by scaling this with a `λ` (lambda) factor.
 - Feature importance and parameter weights were informed by **EDA heatmaps**.
+- ```math
+\text{demand} = \alpha \cdot \text{occupancy\_rate}_{\text{norm}} + 
+                \beta \cdot \text{QueueLength}_{\text{norm}} - 
+                \gamma \cdot \text{TrafficConditionNearby}_{\text{norm}} + 
+                \delta \cdot \text{IsSpecialDay} + 
+                \epsilon \cdot \text{vehicle\_weight}
+                ```
 
 #### Model 3: Competitive Pricing *(Not Functional)*
 - Intended to adjust pricing based on nearby parking lots using **geo-coordinates**.
