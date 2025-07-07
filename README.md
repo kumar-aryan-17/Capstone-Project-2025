@@ -23,7 +23,7 @@ This repository contains the complete solution to the Summer Analytics 2025 Caps
 
 ```mermaid
 graph TD;
-    A[dataset.csv (real-time stream] --> B[Pathway Ingestion];
+    A[dataset.csv realtime stream] --> B[Pathway Ingestion];
     B --> C[Feature Engineering];
     C --> D[Model Selector];
     D --> E[Model 1: Linear Pricing];
