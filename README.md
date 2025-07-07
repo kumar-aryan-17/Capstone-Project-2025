@@ -67,9 +67,9 @@ graph TD;
 </table>
 
 <!-- Bottom Image -->
-<p align="center">
-  <img src="7.png" width="400"/>
-</p>
+<div style="margin-left: 20%;">
+  <img src="images/img7.png" width="400"/>
+</div>
 
 
 
