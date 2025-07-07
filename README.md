@@ -86,7 +86,7 @@ graph TD;
                 \gamma \cdot \text{TrafficConditionNearby}_{\text{norm}} + 
                 \delta \cdot \text{IsSpecialDay} + 
                 \epsilon \cdot \text{vehicle\_weight}
-                ```
+    
 
 #### Model 3: Competitive Pricing *(Not Functional)*
 - Intended to adjust pricing based on nearby parking lots using **geo-coordinates**.
