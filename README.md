@@ -52,9 +52,9 @@ graph TD;
 ## 📂 Repository Contents
 
 ```
-├── Summer_Analytics_Final_Colab.ipynb   # Complete Colab notebook with all models & visualizations
+├── Capstone_Project_Implementation.ipynb.ipynb   # Complete Colab notebook with all models & visualizations
 ├── Summer_Analytics_Report.pdf          # Final well-documented project report (optional but added)
-├── dataset.csv                          # Input data for all models
+├── dataset.csv                        # Input data for all models
 ```
 
 ---
