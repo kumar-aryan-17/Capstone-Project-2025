@@ -67,7 +67,7 @@ graph TD;
 </table>
 
 
-<div style="margin-left: 20%;">
+<div style="margin-left: 5%;">
   <img src="7.png" width="400"/>
 </div>
 
