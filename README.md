@@ -52,7 +52,7 @@ graph TD;
 ---
 
 ## 📊 Visualizations from Exploratory Data Analysis
-<!-- 3x2 Image Grid -->
+
 <table>
   <tr>
     <td><img src="/1.png" width="250"/></td>
@@ -66,12 +66,10 @@ graph TD;
   </tr>
 </table>
 
-<!-- Bottom Image -->
-<p align="center">
-  <img src="images/img7.png" width="600"/>
-</p>
 
-
+<div style="margin-left: 20%;">
+  <img src="7.png" width="400"/>
+</div>
 
 
 ---
