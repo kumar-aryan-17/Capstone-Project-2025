@@ -2,6 +2,7 @@
 # Capstone-Project-2025
 ### Capstone Project by Summer Analytics 2025 ( IIT Guwahati )
 ### The project notebook is fully completed, thoroughly commented, and provides detailed explanations for each step. Do check it out !!!
+### Find the google collab notebook [here](https://colab.research.google.com/drive/1vOrrPVJAKDlXFDHchGSLN576CrMV8eRS?usp=sharing)
 
 ## Dynamic Pricing for Urban Parking Lots
 
