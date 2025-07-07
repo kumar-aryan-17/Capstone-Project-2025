@@ -51,6 +51,31 @@ graph TD;
 
 ---
 
+## 📊 Visualizations from Exploratory Data Analysis
+<!-- 3x2 Image Grid -->
+<table>
+  <tr>
+    <td><img src="/1.png" width="250"/></td>
+    <td><img src="/2.png" width="250"/></td>
+    <td><img src="/3.png" width="250"/></td>
+  </tr>
+  <tr>
+    <td><img src="/4.png" width="250"/></td>
+    <td><img src="/5.png" width="250"/></td>
+    <td><img src="/6.png" width="250"/></td>
+  </tr>
+</table>
+
+<!-- Bottom Image -->
+<p align="center">
+  <img src="7.png" width="400"/>
+</p>
+
+
+
+
+---
+
 ## ⚙️ Elaborate Workflow Explanation
 
 ### 1. Understanding the Problem
