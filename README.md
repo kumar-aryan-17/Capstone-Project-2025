@@ -49,44 +49,48 @@ graph TD;
 
 ---
 
-## Elaborate Workflow Explaination
+## ⚙️ Elaborate Workflow Explanation
 
-1. **Understanding the Problem**
-    - Getting what is to be done in the project by studying the document given on https://drive.google.com/drive/folders/1ts6zhcX8hAj1X-c9HLre_giZpGT7zxT5
-      
-2. **Exploratory Data Analysis**
-    - Basic insights using .describe(), .dtypes, .duplicated and .isnull() for their features
-    - Used headmaps for data correlation
-    - Used pd.crosstab for gaining insights that how queue length varies with special day
-    - Checked the probabilty distribution profile of Occupancy feature
-    - Identifying the hour of the day when occupancy is highest using sns.lineplot
+### 1. Understanding the Problem
+- Reviewed the project scope and requirements by studying the documents provided at [this Drive link](https://drive.google.com/drive/folders/1ts6zhcX8hAj1X-c9HLre_giZpGT7zxT5).
 
-3. **Feature Engineering**
-   -  Creating a new feature named occupancy rate. Occupancy rate is calculated as the ratio of the number of occupied spaces to the total capacity of the parking lot.
-   -  Mapping categorical values to numerical values for TrafficConditionNearby. This is necessary for machine learning models that require numerical input
-   -  Since the categorical columns we required ie VehicleType and TrafficConditionNearby were Ordinal Categorical Variables, we directed mapped them using custom created functions (Ordinal Encoder of scikit-learn library can also be used)
-   -  The columns TrafficConditionNearby, QueueLength, occupancy_rate & vehicle_weight were normalised using MinMaxSclaer class from scikit-learn library.
-   -  Created a function to visualize the distribution of a feature before and after normalization
-  
-4. **MODEL BUILDING**
-    - Model 1: Baseline Linear Model
-          - This model predicts the price based on a linear relationship with occupancy rate.
-          - The next price is a function of the previous price and the occupancy ratio, adjusted by a small alpha value.
-          - Price(t+1) = Price(t) + α * (Occupancy_rate)
-    - Model 2 – Demand-Based Pricing
-          - In this model we construct a demand function that takes into account various factors such as occupancy rate, queue length, traffic condition, special days, and vehicle weight.
-          - The demand function is a linear combination of these factors, and the price is determined based on the demand normalized to a range of [0,1].
-          - The base price is adjusted by a lambda parameter that scales the normalized demand to determine the final price.
-          - The parameters are decided by the HEATMAP generated in EDA
-    - Model 3 – Competitive Pricing ( NOT FUNCTIONAL )
-          - This model aimed to adjust parking prices based on competition from nearby lots.
-          - It used geo-coordinates to calculate the average price of lots within a 1 km radius and applied an adjustment factor.
+### 2. Exploratory Data Analysis (EDA)
+- Explored the dataset using methods like `.describe()`, `.dtypes`, `.duplicated()`, and `.isnull()` to understand feature types and data cleanliness.
+- Used **heatmaps** to analyze feature correlations.
+- Applied `pd.crosstab` to explore how **queue length** varies with **special days**.
+- Analyzed the **probability distribution** of the `Occupancy` feature.
+- Identified peak occupancy hours using `sns.lineplot`.
 
-5. **Visualization with Bokeh**
-       - Created line plots based on Model 1 and Model 2 for analysing the price predicted by both the models
+### 3. Feature Engineering
+- Created a new feature: **Occupancy Rate** = *Occupied Spaces / Total Capacity*.
+- Mapped **categorical values** in `TrafficConditionNearby` to numerical ones to make the data model-friendly.
+- For **ordinal categorical features** (`VehicleType`, `TrafficConditionNearby`), used custom mapping functions (alternatively, `OrdinalEncoder` from scikit-learn can be used).
+- Normalized key features (`TrafficConditionNearby`, `QueueLength`, `occupancy_rate`, `vehicle_weight`) using `MinMaxScaler` from scikit-learn.
+- Developed a custom visualization function to show feature distributions **before and after normalization**.
 
-6. **Pathway Real-Time Data Visualization**
-       - Created a pathway stream for visualizating the data in real time.
+### 4. Model Building
+
+#### Model 1: Baseline Linear Model
+- Predicts price based on a **linear relationship** with occupancy rate.
+- Formula: `Price(t+1) = Price(t) + α * (Occupancy_rate)`.
+- Serves as a baseline benchmark.
+
+#### Model 2: Demand-Based Pricing
+- Constructs a **demand function** using occupancy rate, queue length, traffic conditions, special days, and vehicle weight.
+- Demand is normalized to [0, 1], and price is calculated by scaling this with a `λ` (lambda) factor.
+- Feature importance and parameter weights were informed by **EDA heatmaps**.
+
+#### Model 3: Competitive Pricing *(Not Functional)*
+- Intended to adjust pricing based on nearby parking lots using **geo-coordinates**.
+- Concept: Calculate average price within a 1 km radius and apply a **competition-based adjustment**.
+- Implementation incomplete due to lack of reliable geo-data.
+
+### 5. Visualization with Bokeh
+- Developed **interactive line plots** using **Bokeh** to compare price predictions from **Model 1 and Model 2**.
+
+### 6. Pathway Real-Time Data Visualization
+- Implemented a **Pathway data stream** for **real-time visualization** and simulation of dynamic parking data.
+
 
 ---
 
