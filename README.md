@@ -22,17 +22,16 @@ This repository contains the complete solution to the Summer Analytics 2025 Caps
 ## 📊 Architecture Diagram
 
 ```mermaid
-graph TD
-    A[dataset.csv (real-time stream)] --> B(Pathway Ingestion)
-    B --> C(Feature Engineering)
-    C --> D[Model Selector]
-    D --> E[Model 1: Linear Pricing]
-    D --> F[Model 2: Demand-Based]
-    D --> G[Model 3: Competitive Pricing]
-    E & F & G --> H[Pricing Output Table]
-    H --> I[Bokeh Visualization Dashboard]
-    H --> J[JSON / Log Output]
-
+graph TD;
+    A[dataset.csv (real-time stream)] --> B(Pathway Ingestion);
+    B --> C(Feature Engineering);
+    C --> D[Model Selector];
+    D --> E[Model 1: Linear Pricing];
+    D --> F[Model 2: Demand-Based];
+    D --> G[Model 3: Competitive Pricing];
+    E & F & G --> H[Pricing Output Table];
+    H --> I[Bokeh Visualization Dashboard];
+    H --> J[JSON / Log Output];
 ```
 
 ---
